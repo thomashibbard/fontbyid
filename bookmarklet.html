@@ -1,0 +1,158 @@
+<html>
+	<head>
+
+	</head>
+	<body>
+
+
+
+	</body>
+</html>
+<script type="text/javascript">
+(function(){
+
+	if (document.getElementById("__getFontContainer")){
+		__getFontRemoveContainer();
+	};
+
+	__getFontGoClick = function(){
+		document.getElementById("__getFontGo").click();
+	};
+
+	__getFontPopulateChild = function(fontID){
+		document.getElementById("__getFontInput").value = fontID;
+		__getFontGoClick();
+	};
+
+	__getFontRemoveContainer = function(){
+		var __getFontElem = document.getElementById("__getFontContainer");
+		__getFontElem.parentNode.removeChild(__getFontElem);
+	};
+
+	__getFontEnterPress = function(e){
+	    e.which = e.which || e.keyCode;
+	    if(e.which == 13) {
+	       __getFontGoClick();
+	    }
+
+	};
+
+	var b = document.getElementsByTagName("body")[0];
+	d = document.createElement("div");
+	d.id = "__getFontContainer";
+
+
+	d.innerHTML = "<div id='__getFontInnerContainer'><input id='__getFontInput' type='text' onkeyup='__getFontEnterPress(event)' placeholder='Enter font ID'></input><button id='__getFontGo' class='__getFontBtn'>Get font</button><button id='__getFontClose' class='__getFontBtn'>&times;</button><span id='__getFontResult'>&nbsp;</span></div>";
+	b.appendChild(d);
+
+	var i = document.getElementById("__getFontInput");
+	var __getFontResetCSS = "#__getFontContainer a,#__getFontContainer abbr,#__getFontContainer acronym,#__getFontContainer address,#__getFontContainer applet,#__getFontContainer article,#__getFontContainer aside,#__getFontContainer audio,#__getFontContainer b,#__getFontContainer big,#__getFontContainer blockquote,#__getFontContainer body,#__getFontContainer canvas,#__getFontContainer caption,#__getFontContainer center,#__getFontContainer cite,#__getFontContainer code,#__getFontContainer dd,#__getFontContainer del,#__getFontContainer details,#__getFontContainer dfn,#__getFontContainer div,#__getFontContainer dl,#__getFontContainer dt,#__getFontContainer em,#__getFontContainer embed,#__getFontContainer fieldset,#__getFontContainer figcaption,#__getFontContainer figure,#__getFontContainer footer,#__getFontContainer form,#__getFontContainer h1,#__getFontContainer h2,#__getFontContainer h3,#__getFontContainer h4,#__getFontContainer h5,#__getFontContainer h6,#__getFontContainer header,#__getFontContainer hgroup,#__getFontContainer html,#__getFontContainer i,#__getFontContainer iframe,#__getFontContainer img,#__getFontContainer ins,#__getFontContainer kbd,#__getFontContainer label,#__getFontContainer legend,#__getFontContainer li,#__getFontContainer mark,#__getFontContainer menu,#__getFontContainer nav,#__getFontContainer object,#__getFontContainer ol,#__getFontContainer output,#__getFontContainer p,#__getFontContainer pre,#__getFontContainer q,#__getFontContainer ruby,#__getFontContainer s,#__getFontContainer samp,#__getFontContainer section,#__getFontContainer small,#__getFontContainer span,#__getFontContainer strike,#__getFontContainer strong,#__getFontContainer sub,#__getFontContainer summary,#__getFontContainer sup,#__getFontContainer table,#__getFontContainer tbody,#__getFontContainer td,#__getFontContainer tfoot,#__getFontContainer th,#__getFontContainer thead,#__getFontContainer time,#__getFontContainer tr,#__getFontContainer tt,#__getFontContainer u,#__getFontContainer ul,#__getFontContainer var,#__getFontContainer video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}#__getFontContainer article,#__getFontContainer aside,#__getFontContainer details,#__getFontContainer figcaption,#__getFontContainer figure,#__getFontContainer footer,#__getFontContainer header,#__getFontContainer hgroup,#__getFontContainer menu,#__getFontContainer nav,#__getFontContainer section{display:block}#__getFontContainer body{line-height:1}#__getFontContainer ol,#__getFontContainer ul{list-style:none}#__getFontContainer blockquote,#__getFontContainer q{quotes:none}#__getFontContainer blockquote:after,#__getFontContainer blockquote:before,#__getFontContainer q:after,#__getFontContainer q:before{content:'';content:none}#__getFontContainer table{border-collapse:collapse;border-spacing:0}";
+
+
+
+
+	var css =  "#__getFontContainer *{font-family: helvetica, arial, sans-serif !important;font-size: 11px !important; color:#000000 !important}#__getFontInput{width:150px;display:inline-block;outline:0;border:1px solid gray;padding: 8px 4px;margin:0 auto;}#__getFontInput:focus{border-color:#30a3c8;outline: 0;outline: none;-webkit-box-shadow: none;-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);box-shadow: none;}#__getFontContainer{width:300px;padding:0 20px 20px 20px;z-index:100000;position:absolute;top:0;left:0;background:#efefef;vertical-align:middle;border-width: 0 3px 3px 0;border-style: solid;border-color: #DEDEDF;}#__getFontInnerContainer{width:auto;margin:15px auto 0}#__getFontGo{padding-left: 12px; padding-right: 12px;}.__getFontBtn{display:inline-block;background:#CDCDCD;padding:8px 5px;margin-left:2px;border:1px solid gray;outline:0}.__getFontBtn:hover{cursor:pointer}.__getFontBtn:active{background:#B3B3B3;border:1px solid #0a0505}.__getFontBtn:nth-of-type(2){padding: 8px 12px;}#__getFontResult{display:inline-block;min-height:15px;padding:5px;padding-top:6px;line-height:16px;width: 250px;border:1px solid #adadad;margin-top:2px; max-height: 250px; overflow-y: scroll;} #__getFontContainer  .__getFontChildLinks{color: blue !important;}#__getFontContainer .__getFontChildLinks:hover{text-decoration: underline; cursor:pointer;}#__getFontCrossOriginWarning{margin-top:15px;text-align: left;} #__getFontCrossOriginWarning, #__getFontNoFontFound, #__getFontCrossOriginWarning a{color:#EC5050}#__getFontCrossOriginWarning a{text-decoration:underline;}#__getFontContainer .__getFontResultHeader{font-size:13px !important;margin-bottom:3pt;display:block;}, #__getFontContainer .__getFontResultSecondary{margin-left:16px; !important}";
+  	
+	style = document.createElement("style");
+	style.appendChild(document.createTextNode(css));
+	document.getElementsByTagName('head')[0].appendChild(style);
+
+	if (document.location.origin.indexOf("cfs-c01") > 0){
+   		document.getElementById("__getFontResult").style.width = "241px";
+	}
+
+
+
+	i.focus();
+
+	var go = document.getElementById("__getFontGo");
+	go.addEventListener("click", function() {
+
+		var __getFontSearchInput = document.getElementById("__getFontInput").value.trim();
+
+		var __getFontFn = /\d{5}/.test(__getFontSearchInput) ? "fontID" : "fontName";
+
+		var xhReq = new XMLHttpRequest();
+
+		xhReq.open("GET", "http://cfs-c01.int/creative/+ct/Thomas/projects/ad_hoc/getFontByID/getFontByID.php?__getFontFn=" + __getFontFn + "&__getFontSearchInput=" + __getFontSearchInput, false);
+		xhReq.send(null);
+		var fontData = JSON.parse(xhReq.responseText);
+		var __getFontResult = document.getElementById("__getFontResult");
+		if (!fontData){
+			console.log("error getting data");
+			__getFontResult.innerHTML = "<span id='__getFontNoFontFound'>Error getting font data for that input. Apologies</span>";
+			return false;
+		}
+
+		
+		
+		
+		if (!fontData.success){
+			__getFontResult.innerHTML = "<span id='__getFontNoFontFound'>No font data found for that ID</span>";
+			return false;
+		}
+
+		if (__getFontFn == "fontID"){
+	
+			if (fontData.type == "fonts"){
+				__getFontResult.innerHTML = "FONT: " + fontData.fontName;
+				if (fontData.fontStyle){
+					__getFontResult.innerHTML += "<br>STYLE: " + fontData.fontStyle;
+				}
+			}else{
+				__getFontResult.innerHTML = "FONT FAMILY: " + fontData.fontName;
+
+				if (fontData.childCuts.regID){
+					__getFontResult.innerHTML += "<br>ID of regular cut: <a class='__getFontChildLinks' onClick='__getFontPopulateChild(" + fontData.childCuts.regID + ")' title='Click to populate input above'>" + fontData.childCuts.regID + "<a>";
+				}
+				if (fontData.childCuts.italicID){
+					__getFontResult.innerHTML += "<br>ID of italic cut: <a class='__getFontChildLinks' onClick='__getFontPopulateChild(" + fontData.childCuts.italicID + ")' title='Click to populate input above'>" + fontData.childCuts.italicID + "<a>";
+				}
+				if (fontData.childCuts.boldID){
+					__getFontResult.innerHTML += "<br>ID of bold cut: <a class='__getFontChildLinks' onClick='__getFontPopulateChild(" + fontData.childCuts.boldID + ")' title='Click to populate input above'>" + fontData.childCuts.boldID + "<a>";
+				}
+				if (fontData.childCuts.boldItalicID){
+					__getFontResult.innerHTML += "<br>ID of bolditalic cut: <a class='__getFontChildLinks' onClick='__getFontPopulateChild(" + fontData.childCuts.boldItalicID + ")' title='Click to populate input above'>" + fontData.childCuts.boldItalicID + "<a>";
+				}
+			}
+		}else{
+
+			if (fontData.fonts.length){
+				__getFontResult.innerHTML = "<span class='__getFontResultHeader'>FONTS:</span>";
+				fontData.fonts.forEach(function(fontData, index){
+					if (fontData.fontName){ 
+						__getFontResult.innerHTML += ("<div class='__getFontResultsContainer'> <b>FONT: " + fontData.fontName + "</b>");
+					}
+					if (fontData.fontID){ 
+						__getFontResult.innerHTML += ("<div class='__getFontResultSecondary'>ID: <a class='__getFontChildLinks'  onClick='__getFontPopulateChild(" + fontData.fontID + ")'>" + fontData.fontID + "</a></div>");
+					}
+					if (fontData.fontStyle){
+						__getFontResult.innerHTML += ("<div class='__getFontResultSecondary'>STYLE: " + fontData.fontStyle + "</div>");
+					}
+					if (fontData.fontSrc){
+						__getFontResult.innerHTML += ("<div class='__getFontResultSecondary'>FILENAME: " + fontData.fontSrc +  "</div></div>");
+					}
+				});
+			}
+
+			if (fontData.font_families.length){
+
+				__getFontResult.innerHTML += "<br><hr><span class='__getFontResultHeader'>FONT FAMILIES:</span><br>";
+
+				fontData.font_families.forEach(function(fontFamilyData, index){
+
+					if (fontFamilyData.fontName) __getFontResult.innerHTML += "<div class='__getFontResultsContainer'>FAMILY NAME: " + fontData.fontName + "</b><br>";
+					if (fontFamilyData.fontID) __getFontResult.innerHTML += "ID: " + fontData.fontID + "</div>";
+				});
+			}
+		}
+	}, false);
+
+	var c = document.getElementById("__getFontClose");
+	c.addEventListener("click", function() {
+		__getFontRemoveContainer();
+	}, false);
+
+}());
+
+</script>
